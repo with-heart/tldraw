@@ -38,7 +38,8 @@
     "docs:watch": "turbo run docs --watch",
     "postinstall": "husky install",
     "pretty-quick": "pretty-quick",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
     "@swc-node/jest": "^1.4.3",
@@ -70,7 +71,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "fix:style && eslint && test"
+      "pre-push": "fix:style && lint && test"
     }
   },
   "packageManager": "yarn@1.22.17",
